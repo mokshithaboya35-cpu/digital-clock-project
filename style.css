@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: radial-gradient(circle at top, #243b70 0, #10172c 48%, #090d18 100%);
+  color: #f7f9ff;
+}
+
+.clock-card {
+  width: min(100%, 620px);
+  padding: clamp(28px, 6vw, 56px);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 28px;
+  background: rgba(15, 23, 42, 0.78);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(12px);
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: #9eb8ff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 10vw, 5.5rem);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 28px rgba(117, 151, 255, 0.25);
+}
+
+#date {
+  margin: 18px 0 28px;
+  color: #c4cce0;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: #7c9cff;
+  color: #10172c;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 150ms ease, background 150ms ease;
+}
+
+button:hover {
+  background: #a6bbff;
+  transform: translateY(-1px);
+}
+
+button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
+
+.note {
+  margin: 28px 0 0;
+  color: #8793ad;
+  font-size: 0.85rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+}
